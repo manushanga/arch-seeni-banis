@@ -1,0 +1,6 @@
+READ ME
+=======
+
+1. Run chroot-run from this directory(scripts).
+2. Run chroot-start from within chroot's shell.
+3. Enjoy!

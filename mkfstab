@@ -1,0 +1,12 @@
+#! /usr/bin/python
+
+import os
+import os.path
+print("""# 
+# /etc/fstab: static file system information
+#
+# <file system> <dir>   <type>  <options>       <dump>  <pass>
+tmpfs           /tmp    tmpfs   nodev,nosuid    0       0""",)
+for i in os.popen("ls /dev/disk/by-uuid"):
+	if len(i)==37:
+		print("UUID="+i[:-1]+" "+os.path.realpath("/dev/disk/by-uuid/"+i[:-1]).replace("/dev/","")+" ext4 defaults 0 1")

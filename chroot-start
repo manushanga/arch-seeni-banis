@@ -1,0 +1,23 @@
+#! /bin/bash
+
+echo "This script will setup Arch-Seeni-Banis."
+echo "(C) 2012 Madura A., Bridge, Arch Linux Contributors"
+echo "http://archlinux.org"
+echo ""
+cd ..
+mkinitcpio -p linux
+/scripts/mkfstab > /etc/fstab.0
+mv /etc/fstab.0 /etc/fstab
+echo "/etc/fstab has been modified with your hard drive information"
+echo "Please change the mount points! Only the UUIDs are filled in"
+echo "correctly, all others are defaults. The mount path is set as"
+echo "device name to make it easy to edit fstab by a human."
+echo ""
+echo "Enter the device that you want to setup as the resume device(this is your swap most of the time)"
+read device
+/scripts/setresume $device > /etc/default/grub.0
+mv /etc/default/grub.0 /etc/default/grub
+grub-mkconfig -o /boot/grub/grub.cfg
+echo ""
+echo "Have fun eating Seeni-Banis!"
+
