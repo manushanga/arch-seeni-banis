@@ -1,7 +1,7 @@
 #! /bin/bash
 
 echo "This script will setup Arch-Seeni-Banis."
-echo "(C) 2012 Madura A., Bridge, Arch Linux Contributors"
+echo "(C) 2012 Madura A., Bridge, Arch Linux Contributors et al."
 echo "http://archlinux.org"
 echo ""
 cd ..
