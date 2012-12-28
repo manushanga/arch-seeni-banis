@@ -2,5 +2,13 @@ READ ME
 =======
 
 1. Run chroot-run from this directory(/scripts).
-2. Run chroot-start from within chroot's shell.
-3. Enjoy!
+2. Run chroot ../ (from this directory, or cd .. and then chroot .)
+3. Run chroot-start from within chroot's shell.
+4. You need to edit /etc/fstab manually but a guiding fstab will be 
+   there after chroot-start ends, DO NOT BOOT with this fstab. You
+   must change the file systems and mount locations manually. The
+   mount points will be replaced with your sd* device names for easy 
+   identification, you must replace these with the real mount points
+   and default file system type is Ext4(the script does no checking)
+   so you have to replace that too.
+5. Enjoy!
