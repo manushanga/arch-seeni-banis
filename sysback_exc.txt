@@ -1,0 +1,26 @@
+# Not home
+/home/*
+
+# Not media
+/media/*
+/mnt/*
+
+# Not sys fs
+/proc/*
+/dev/*
+/sys/*
+/lost+found/*
+/run/*
+# ahem, excuse the stupidity here
+/usr/share/applications/opt/*
+/opt/*
+                                                      
+# Not temporary files
+/tmp/*
+
+# Not the cache for pacman
+/var/cache/*
+/var/log/*
+/var/tmp/*
+/var/run/*
+/srv/*
