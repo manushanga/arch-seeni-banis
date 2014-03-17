@@ -13,11 +13,17 @@ echo "Please change the mount points! Only the UUIDs are filled in"
 echo "correctly, all others are defaults. The mount path is set as"
 echo "device name to make it easy to edit fstab by a human."
 echo ""
-echo "Enter the device that you want to setup as the resume device(this is your swap most of the time)"
+echo "Enter the device that you want to setup as the resume device"
+echo "(this is going to be your swap drive)"
 read device
 /scripts/setresume $device > /etc/default/grub.0
 mv /etc/default/grub.0 /etc/default/grub
 grub-mkconfig -o /boot/grub/grub.cfg
 echo ""
-echo "Have fun eating Seeni-Banis!"
+echo "-- Notice --"
+echo "Please run grub-install on your root device, which is /dev/sda"
+echo "if your root partition is /dev/sdaX, X is a number"
+echo ""
+echo "-- Have fun eating Seeni-Banis! --"
+
 
