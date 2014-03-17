@@ -1,6 +1,14 @@
 READ ME
 =======
 
+First use sysback.sh to make a copy of a working Arch Linux installation
+you may have to change few things in it like the destination where to
+write the archive of the installation. After that's done extract all the
+files to your new root partition (this is assumed to be ext4 for the
+rest of this process, if it's not ext4 then change things in mkfstab)
+After extraction follow these steps, (you must copy all the scripts
+to /scripts)
+
 1. Run chroot-run from this directory(/scripts).
 2. Run chroot ../ (from this directory, or cd .. and then chroot .)
 3. Run chroot-start from within chroot's shell.

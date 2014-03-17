@@ -2,7 +2,7 @@
 # full system backup
 
 # Backup destination
-backdest=/media/ENT/Backups
+backdest=.
 
 # Labels for backup name
 #PC=${HOSTNAME}
